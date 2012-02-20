@@ -1,8 +1,6 @@
-#<!このファイルにマッピングを書く
-#	このファイルに書いたサーブレットクラスをロードしてそのメソッドのdoGetを呼べばいいのか/!>
-	
+#このファイルにマッピングを書く
+#
 
-	
 #/ DefaultServlet
 / MyServelet
 /index MyServelet
