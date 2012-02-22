@@ -41,7 +41,7 @@ public class HttpAccept {
 	}
 
 	private void setBody(String string) {
-		String[] split = string.split("\n");
+		String[] split = string.split(CRLF);
 		for (String line : split) {
 			String[] sets = line.split(EQUAL);
 			if (sets.length != 2) {
@@ -65,6 +65,7 @@ public class HttpAccept {
 	}
 
 	protected void setGetQuery(HttpServletRequest request, String[] split) {
+		//正規表現として使わないために\？でバックスラッシュをそのまま表示するのにそのためのエスケープ
 		String[] split2 = split[1].split("\\?");
 		request.dir = split2[0];
 		String[] queries = split2[1].split(AND);

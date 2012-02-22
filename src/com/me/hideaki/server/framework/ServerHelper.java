@@ -9,8 +9,9 @@ import com.me.hideaki.server.http.io.HttpPush;
 import com.me.hideaki.server.http.servelet.HttpServletOnlyGet;
 import com.me.hideaki.server.http.servelet.HttpServletRequest;
 import com.me.hideaki.server.http.servelet.HttpServletResponse;
+import static com.me.hideaki.server.framework.ConstDifinistion.*;
 
- class ServerHelper {
+ class ServerHelper {	
 	Socket soc;
 
 	ServerHelper(Socket soc) {
@@ -29,11 +30,11 @@ import com.me.hideaki.server.http.servelet.HttpServletResponse;
 
 	public HttpServletResponse methodCall(HttpServletOnlyGet servelet, HttpServletRequest req) throws Exception {
 		HttpServletResponse resp = new HttpServletResponse();
-		if (req.method.equals("GET")) {
+		if (req.method.equals(GET)) {
 			servelet.doGet(req, resp);
-		} else if (req.method.equals("POST")) {
+		} else if (req.method.equals(POST)) {
 			servelet.doGet(req, resp);
-		} else if (req.method.equals("DELETE")) {
+		} else if (req.method.equals(DELETE)) {
 			;
 		}
 		return resp;

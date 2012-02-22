@@ -4,6 +4,7 @@ public class ConstDifinistion {
 	public static final String CONTENT_LENGTH = "Content-Length";
 	public static final String POST = "POST";
 	public static final String GET = "GET";
+	public static final String DELETE = "DELETE";
 	public static final String NOT_FOUND = "404 NOT FOUND";
 	public static final String CRLF = "\n";
 	public static final String CONTENT_TYPE = "Content-Type: text/html; charset=";

@@ -13,7 +13,7 @@ import static com.me.hideaki.server.framework.ConstDifinistion.*;
 public class ClassMapping {
 
 	public HttpServletOnlyGet load(String dir) throws Exception {
-		String clazzName = fun(dir);
+		String clazzName = getClassName(dir);
 		if (clazzName == null) {
 			return null;
 		}
@@ -21,7 +21,7 @@ public class ClassMapping {
 		return (HttpServletOnlyGet) clazz.newInstance();
 	}
 
-	private String fun(String dir) throws FileNotFoundException {
+	private String getClassName(String dir) throws FileNotFoundException {
 
 		File file = new File(".", MAPPING_TXT);
 
